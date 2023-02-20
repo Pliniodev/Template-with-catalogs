@@ -55,14 +55,24 @@ dependencies {
     implementation(libs.compose.animation)
     implementation(libs.compose.activity)
 
+    // AndroidX
+    implementation(libs.androidX.core.ktx)
+    implementation(libs.androidX.lifecycle.runtime)
+
+    // Hilt
+    implementation(libs.hilt.core)
+    kapt(libs.hilt.kapt)
+
+    //navigation
+    implementation(libs.voyager.navigator)
+    implementation(libs.voyager.transition)
+    implementation(libs.voyager.hilt)
+    implementation(libs.voyager.androidX)
+
     // Compose Debug & Testing
     androidTestImplementation(libs.compose.test.junit)
     debugImplementation(libs.compose.debug.manifest)
     debugImplementation(libs.compose.debug.tooling)
-
-    // AndroidX
-    implementation(libs.androidX.core.ktx)
-    implementation(libs.androidX.lifecycle.runtime)
 
     // Testing
     testImplementation(libs.testing.junit)
@@ -72,17 +82,7 @@ dependencies {
     androidTestImplementation(libs.uiTesting.junit)
     androidTestImplementation(libs.uiTesting.espresso)
 
-    // Hilt
-    implementation(libs.hilt.core)
-    kapt(libs.hilt.kapt)
-
-    //navigation
-
-    implementation(libs.voyager.navigator)
-    implementation(libs.voyager.transition)
-    implementation(libs.voyager.hilt)
-    implementation(libs.voyager.androidX)
-
+    // firebase
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.firestore)
     implementation(libs.firebase.database)
