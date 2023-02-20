@@ -12,6 +12,6 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "DagShoes"
+rootProject.name = "Template"
 include (":app")
 enableFeaturePreview("VERSION_CATALOGS")

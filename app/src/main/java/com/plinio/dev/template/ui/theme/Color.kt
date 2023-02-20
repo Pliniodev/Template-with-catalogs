@@ -1,4 +1,4 @@
-package com.plinio.dev.dagshoes.ui.theme
+package com.plinio.dev.template.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

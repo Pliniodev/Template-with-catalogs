@@ -1,4 +1,4 @@
-package com.plinio.dev.dagshoes
+package com.plinio.dev.template
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,13 +10,13 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.plinio.dev.dagshoes.ui.theme.DagShoesTheme
+import com.plinio.dev.template.ui.theme.TemplateTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            DagShoesTheme {
+            TemplateTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
@@ -40,7 +40,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    DagShoesTheme {
+    TemplateTheme {
         Greeting("Android")
     }
 }

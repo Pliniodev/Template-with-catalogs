@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.plinio.dev.dagshoes"
+    namespace = "com.plinio.dev.template"
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.plinio.dev.dagshoes"
+        applicationId = "com.plinio.template"
         minSdk = 24
         targetSdk = 33
         versionCode = 1

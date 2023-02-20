@@ -1,4 +1,4 @@
-package com.plinio.dev.dagshoes
+package com.plinio.dev.template
 
 import org.junit.Test
 
