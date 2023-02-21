@@ -39,7 +39,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.0-alpha02"
+        kotlinCompilerExtensionVersion = "1.4.1"
     }
 }
 
@@ -89,6 +89,8 @@ dependencies {
     implementation(libs.firebase.coroutines)
     implementation(libs.firebase.auth)
     implementation(libs.google.playservices.auth)
+
+    implementation(libs.ksp)
 }
 
 kapt {
