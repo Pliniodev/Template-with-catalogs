@@ -11,6 +11,7 @@ firebase-coroutines = "1.6.4"
 google-auth = "20.3.0"
 mockk = "1.13.2"
 ksp = "1.8.0-1.0.8"
+lyricist = "1.2.2"
 
 androidX-ktx = "1.6.0"
 androidX-lifecycle-runtime = "2.4.0"
@@ -74,11 +75,14 @@ firebase-auth = { module = "com.google.firebase:firebase-auth-ktx" }
 google-playservices-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "google-auth" }
 
 #Ksp
-ksp = { module = "com.google.devtools.ksp:symbol-processing-api", version.ref = "ksp" }
+ksp-api = { module = "com.google.devtools.ksp:symbol-processing-api", version.ref = "ksp" }
+
+#Lyricist
+lyricist = { module = "cafe.adriel.lyricist:lyricist", version.ref = "lyricist" }
+lyricist-processor = { module = "cafe.adriel.lyricist:lyricist-processor", version.ref = "lyricist" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 kotlin-linter = { id = "org.jmailen.kotlinter", version = "3.3.0" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-google-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }

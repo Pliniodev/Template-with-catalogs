@@ -1,7 +1,10 @@
+import org.codehaus.groovy.ast.tools.GeneralUtils.args
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt")
+    id("com.google.devtools.ksp") version libs.versions.ksp
 }
 
 android {
@@ -25,6 +28,17 @@ android {
         getByName("release") {
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+        }
+    }
+    kotlin {
+        sourceSets.release {
+            kotlin.srcDir("build/generated/ksp/release/kotlin")
+        }
+        sourceSets.debug {
+            kotlin.srcDir("build/generated/ksp/debug/kotlin")
+        }
+        sourceSets.test {
+            kotlin.srcDir("build/generated/ksp/test/kotlin")
         }
     }
     compileOptions {
@@ -90,9 +104,17 @@ dependencies {
     implementation(libs.firebase.auth)
     implementation(libs.google.playservices.auth)
 
-    implementation(libs.ksp)
+    // lyricist
+    implementation(libs.lyricist)
+    implementation(libs.lyricist.processor)
+    implementation(libs.ksp.api)
+    ksp (libs.lyricist.processor)
 }
 
 kapt {
     correctErrorTypes = true
+}
+
+ksp {
+    arg("lyricist.internalVisibility", "true")
 }
